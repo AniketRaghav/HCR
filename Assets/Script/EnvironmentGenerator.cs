@@ -57,14 +57,23 @@ public class EnvironmentGenerator : MonoBehaviour
         {
             GroundtoSpawn = Ground9;
         }
+<<<<<<< Updated upstream
         SpawnNextLevel();
+=======
+        
+>>>>>>> Stashed changes
     }
 
     public void SpawnNextLevel()
     {
         Instantiate(GroundtoSpawn, EndPoint);
+<<<<<<< Updated upstream
         
     }
 
 
+=======
+        Debug.Log("Spawning");
+    }
+>>>>>>> Stashed changes
 }
