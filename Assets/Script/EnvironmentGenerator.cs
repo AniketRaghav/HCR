@@ -58,13 +58,17 @@ public class EnvironmentGenerator : MonoBehaviour
         {
             GroundtoSpawn = Ground9;
         }
-        SpawnNextLevel();
+        
     }
 
     public void SpawnNextLevel()
     {
         Instantiate(GroundtoSpawn, EndPoint);
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Hit");
     }
 
 

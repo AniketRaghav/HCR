@@ -28,4 +28,8 @@ public class DriveCar : MonoBehaviour
         _backTireRB.AddTorque(-_moveInput * _speed * Time.fixedDeltaTime);
         _carRb.AddTorque(_moveInput * _speed * Time.fixedDeltaTime);
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Work");
+;    }
 }
