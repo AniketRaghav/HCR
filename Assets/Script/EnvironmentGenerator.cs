@@ -6,6 +6,7 @@ using UnityEngine.U2D;
 public class EnvironmentGenerator : MonoBehaviour
 {
 
+
     public GameObject Ground1;
     public GameObject Ground2;
     public GameObject Ground3;
@@ -20,60 +21,51 @@ public class EnvironmentGenerator : MonoBehaviour
     private GameObject GroundtoSpawn;
     public void Awake()
     {
-        float RandomNumber = Random.Range(1,9);
-        if (RandomNumber == 1 )
+        float RandomNumber = Random.Range(1, 9);
+        if (RandomNumber == 1)
         {
             GroundtoSpawn = Ground1;
         }
-        else if (RandomNumber == 2 )
+        else if (RandomNumber == 2)
         {
             GroundtoSpawn = Ground2;
         }
-        else if (RandomNumber == 3 )
+        else if (RandomNumber == 3)
         {
-            GroundtoSpawn = Ground3;    
+            GroundtoSpawn = Ground3;
         }
-        else if ( RandomNumber == 4 )
+        else if (RandomNumber == 4)
         {
             GroundtoSpawn = Ground4;
         }
-        else  if ( RandomNumber == 5 )
+        else if (RandomNumber == 5)
         {
             GroundtoSpawn = Ground5;
         }
-        else if ( RandomNumber == 6 )
+        else if (RandomNumber == 6)
         {
             GroundtoSpawn = Ground6;
         }
-        else if ( RandomNumber == 7 )
+        else if (RandomNumber == 7)
         {
             GroundtoSpawn = Ground7;
         }
-        else if ( RandomNumber == 8 )
+        else if (RandomNumber == 8)
         {
             GroundtoSpawn = Ground8;
         }
-        else if ( RandomNumber == 9 )
+        else if (RandomNumber == 9)
         {
             GroundtoSpawn = Ground9;
         }
-<<<<<<< Updated upstream
         SpawnNextLevel();
-=======
-        
->>>>>>> Stashed changes
     }
 
     public void SpawnNextLevel()
     {
         Instantiate(GroundtoSpawn, EndPoint);
-<<<<<<< Updated upstream
-        
+
     }
 
 
-=======
-        Debug.Log("Spawning");
-    }
->>>>>>> Stashed changes
 }
