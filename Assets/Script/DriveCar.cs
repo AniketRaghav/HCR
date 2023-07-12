@@ -9,18 +9,25 @@ public class DriveCar : MonoBehaviour
     [SerializeField] private Rigidbody2D _carRb;
     [SerializeField] private float _speed = 150f;
     [SerializeField] private float _rotationspeed = 300f;
+    public GameObject GameManager;
 
     private float _moveInput;
+    private Vector3 initialPosition;
 
     void Start()
     {
-        
+        initialPosition = transform.position;
     }
 
     
     private void Update()
     {
         _moveInput = Input.GetAxisRaw("Horizontal");
+        if (transform.position.x - initialPosition.x >= 75.0f)
+        {
+            CallFunction();
+            initialPosition = transform.position;
+        }
     }
     private void FixedUpdate()
     {
@@ -32,4 +39,13 @@ public class DriveCar : MonoBehaviour
     {
         Debug.Log("Work");
 ;    }
+    private void CallFunction()
+    {
+        GameManager.GetComponent<GameManager>().SpawnNextLevel();
+    }
+    public void OnStartPressedD()
+    {
+        Input.GetKeyDown(KeyCode.D);
+    }
+
 }

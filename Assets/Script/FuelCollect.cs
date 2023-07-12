@@ -9,6 +9,7 @@ public class FuelCollect : MonoBehaviour
     public static FuelController instance;
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if(collision.gameObject.CompareTag("Player"))
         {
             FuelController.instance.FillFuel();

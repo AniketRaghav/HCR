@@ -66,10 +66,7 @@ public class EnvironmentGenerator : MonoBehaviour
         Instantiate(GroundtoSpawn, EndPoint);
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Debug.Log("Hit");
-    }
+   
 
 
 }

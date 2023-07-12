@@ -7,6 +7,7 @@ public class ShowDistance : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI m_TextMeshProUGUI;
     [SerializeField] private Transform _playerTrans;
+    public GameObject GameManager;
 
     private Vector2 _startPosition;
 
@@ -18,10 +19,9 @@ public class ShowDistance : MonoBehaviour
     {
         Vector2 distance = (Vector2)_playerTrans.position - _startPosition;
         distance.y = 0f;
-        if(distance.x <0)
-        {
-            distance.x = 0;
-        }
+        
         m_TextMeshProUGUI.text = distance.x.ToString("F0") + "m";
+        
     }
+    
 }
